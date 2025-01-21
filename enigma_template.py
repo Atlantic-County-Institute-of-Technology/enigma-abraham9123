@@ -1,28 +1,23 @@
-# enigma.py
-# description: a simple rotational ciphertext program that can create
-# custom encoded messages, as well as encode and decode from file.
-# author: YOUR_NAME_HERE
-# created: MM.DD.YYYY
-# last update:  MM.DD.YYYY
+# author: Quinn Abraham
+# created: 11-20-24
+# last update:  11-25-24
 import random
 
-# we'll be using this string for the majority of our translations
+#were gonna use this translation
 alphabet = "abcdefghijklmnopqrstuvwxyz"
 
-# user inputs a message and selects a key (or random), the message is then translated using the cipher
+# user puts in a message and selects a key (or random), the message is then translated using the cipher
 def encode_message():
     message = (input("put in the stupid message you want me to encode bc u cant do it urself dummy"))
     key = int(input("input the key netta(leave blank for random)"))
     if key == "":
-        key = random.randint(0, 26)
+        key = random.randint(0,26)
     print(key)
     for x in range(len(message)):
         ordmessage = ord(message[x])
         ordmessage = ordmessage + key
         print(chr(ordmessage))
     # encodes a target file, similarly to encode_message, except now targeting a filename
-
-# encodes a target file, similarly to encode_message, except now targeting a filename
 def encode_file():
     pass
 
@@ -39,14 +34,14 @@ def decode_unknown_key(filename):
 # main method declaration
 def main():
     while True:
-        print(f"Welcome to the Enigma Machine!\n"
-              f"Please select an option:\n"
+        print(f"welcome to the machine that encodes stuff\n"
+              f"select a option before i 808:\n"
               f"[1]: Encode a custom message.\n"
-              f"[2]: Encode file.\n"
-              f"[3]: Decode file.\n"
-              f"[4]: Exit.")
+              f"[2]: Encode a file.\n"
+              f"[3]: Decode a file.\n"
+              f"[4]: exit(please pick this I dont wanna do this)")
 
-        selection = input("Choose an option:")
+        selection = input("pick an option bubba")
 
         if selection == "1":
             encode_message()
@@ -55,10 +50,10 @@ def main():
         elif selection == "3":
             decode_file()
         elif selection == "4":
-            print("Goodbye.")
+            print("peace slime")
             exit()
         else:
-            print("Invalid choice. Please try again.")
+            print("ur choice is stupid do it until its not")
 
 # runs on program start
 if __name__ == "__main__":
